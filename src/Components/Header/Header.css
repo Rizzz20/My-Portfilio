@@ -1,0 +1,129 @@
+.profile {
+  position: relative;
+  padding-top: 3.5rem;
+}
+
+.profile__container {
+  row-gap: 2rem;
+}
+
+.profile__data {
+  display: grid;
+  text-align: center;
+}
+
+.profile__perfil {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
+    hsla(var(--hue), var(--sat), var(--lig), 0.2) 100%
+  );
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.profile__perfil img {
+  width: 70px;
+}
+
+.profile__border {
+  border: 3.5px solid var(--first-c);
+  justify-self: center;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.profile__name {
+  font-size: var(--h2-fs);
+}
+
+.profile__profession {
+  font-size: var(--smaller-fs);
+  font-weight: 500;
+  color: var(--text-c);
+  margin-bottom: 1rem;
+}
+
+.profile__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.75rem;
+}
+
+.profile__social-link {
+  font-size: 1.25rem;
+  color: var(--title-c);
+  transition: 0.3s;
+}
+
+.profile__social-link:hover {
+  color: var(--first-c);
+}
+
+.profile__info {
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.profile__info-group {
+  text-align: center;
+}
+
+.profile__info-number {
+  font-size: var(--normal-fs);
+  margin-bottom: 0.25rem;
+}
+
+.profile__info-description {
+  font-size: var(--smaller-fs);
+  font-weight: 500;
+}
+
+/* THEME */
+
+@media screen and (min-width: 992px) {
+  .profile {
+    padding-top: 4rem;
+  }
+
+  .profile__border {
+    width: 135px;
+    height: 135px;
+    margin-bottom: 1rem;
+  }
+
+  .profile__perfil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile__perfil img {
+    width: 85px;
+  }
+
+  .profile__profession {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile__info {
+    column-gap: 3rem;
+  }
+
+  .profile__info-description {
+    font-size: var(--small-fs);
+  }
+
+  .profile__buttons {
+    column-gap: 2rem;
+  }
+}

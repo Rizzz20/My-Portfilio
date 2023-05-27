@@ -1,0 +1,176 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-c: hsl(0, 100%, 50%);
+  --title-c: hsl(0, 0%, 40%);
+  --text-c: hsl(0, 0%, 50%);
+  --body-c: hsl(0, 0%, 100%);
+  --container-c: hsl(0, 0%, 93%);
+  --text-w: #fff;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-f: "Poppins", sans-serif;
+
+  --big-fs: 1.5rem;
+  --h2-fs: 1.25rem;
+  --h3-fs: 1rem;
+  --normal-fs: 0.938rem;
+  --small-fs: 0.813rem;
+  --smaller-fs: 0.75rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-fs: 1.8rem;
+    --h2-fs: 1.5rem;
+    --h3-fs: 1.25rem;
+    --normal-fs: 1rem;
+    --small-fs: 0.875rem;
+    --smaller-fs: 0.813rem;
+  }
+}
+
+.dark-theme {
+  --title-c: hsl(0, 0%, 100%);
+  --text-c: hsl(0, 0%, 80%);
+  --body-c: hsl(0, 0%, 7%);
+  --container-c: hsl(0, 1%, 17%);
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-f);
+  font-size: var(--normal-fs);
+  background-color: var(--body-c);
+  color: var(--text-c);
+  transition: 0.3s;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-c);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 80%;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: var(--first-c);
+}
+
+/* Variable */
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* BUTTON */
+.button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: transparent;
+  border: 2.5px solid var(--first-c);
+  color: var(--title-c);
+  padding: 1.15rem 1.5rem;
+  border-radius: 1.5rem;
+  transition: 0.3s;
+  box-shadow: 0 8px 24px var(--container-c);
+}
+
+.button:hover {
+  background-color: var(--first-c);
+  color: #fff;
+}
+
+.button .icon__profile {
+  font-size: 1.25rem;
+}
+
+.button__small {
+  padding: 0.75rem;
+  box-shadow: none;
+}
+
+.button__gray {
+  background-color: transparent;
+  color: var(--title-c);
+  border: 2.5px solid var(--first-c);
+}
+
+.button__gray:hover {
+  background-color: var(--first-c);
+  color: #fff;
+}
+
+.profile__buttons,
+.profile__buttons-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__buttons {
+  column-gap: 1rem;
+}
+
+.profile__buttons-small {
+  column-gap: 0.25rem;
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .change-theme {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+}
